@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ativo Imobilizado - Professor Moreira Mobile</title>
+<style>
+:root{--azul:#071d3a;--azul2:#0b3b73;--dourado:#f6c453;--rosa:#fff1f6;--verde:#0f766e;--vermelho:#b91c1c;--cinza:#f4f6f8;--texto:#111827}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#071d3a,#0b3b73 45%,#f4f6f8 45%);color:var(--texto)}
+.app{max-width:520px;margin:0 auto;min-height:100vh;background:#fff;box-shadow:0 0 35px rgba(0,0,0,.25)}
+header{background:var(--azul);color:#fff;padding:18px 16px 14px;text-align:center;position:sticky;top:0;z-index:10;border-bottom:4px solid var(--dourado)}
+header h1{font-size:20px;margin:0 0 4px;letter-spacing:.4px}header p{font-size:12px;margin:0;opacity:.95}.whats{font-weight:bold;color:#ffe08a}
+.screen{display:none;padding:18px}.screen.active{display:block}.card{background:#fff;border:1px solid #e5e7eb;border-radius:18px;padding:18px;margin:12px 0;box-shadow:0 8px 20px rgba(7,29,58,.08)}
+.hero{padding:28px 20px;text-align:center;background:linear-gradient(160deg,#071d3a,#0b3b73);color:#fff;border-radius:0 0 28px 28px}.hero h2{font-size:30px;margin:8px 0}.hero .badge{display:inline-block;background:var(--dourado);color:#111827;font-weight:bold;padding:7px 12px;border-radius:999px;font-size:13px}.hero p{line-height:1.45}
+input{width:100%;padding:15px;border-radius:14px;border:2px solid #cbd5e1;font-size:16px;margin-top:10px}button{border:0;border-radius:14px;padding:13px 16px;font-weight:bold;font-size:15px;cursor:pointer} .btn{background:var(--azul2);color:#fff}.btn2{background:var(--dourado);color:#111827}.btn3{background:#e5e7eb;color:#111827}.btn-red{background:var(--vermelho);color:#fff}.row{display:flex;gap:10px;flex-wrap:wrap}.row button{flex:1}.menu{display:grid;grid-template-columns:1fr 1fr;gap:12px}.menu button{min-height:82px;font-size:16px}.progress{height:9px;background:#e5e7eb;border-radius:20px;overflow:hidden;margin:8px 0}.bar{height:100%;width:0;background:var(--dourado);transition:.3s}
+h2{color:var(--azul);font-size:24px}h3{color:var(--azul2);font-size:19px}.topic{border-left:5px solid var(--dourado);padding-left:12px;margin:18px 0}.pill{display:inline-block;background:#eef2ff;color:#172554;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:bold;margin:3px}.mapa p,.mapa li{line-height:1.48;font-size:15px}.mapa ul{padding-left:20px}.formula{background:#f8fafc;border:2px dashed #94a3b8;border-radius:16px;padding:14px;font-weight:bold;line-height:1.8}.dica{background:#fff7ed;border-left:6px solid #fb923c;border-radius:12px;padding:12px;margin:12px 0}.alerta{background:#fef2f2;border-left:6px solid #ef4444;border-radius:12px;padding:12px;margin:12px 0}.ok{background:#ecfdf5;border-left:6px solid #10b981;border-radius:12px;padding:12px;margin:12px 0}
+.flash{min-height:330px;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--rosa);border:3px solid #fecdd3;border-radius:24px;padding:24px;font-size:22px;line-height:1.35;font-weight:bold;user-select:none}.flash.back{background:#e8f4ff;border-color:#93c5fd;font-size:18px;font-weight:normal}.counter{text-align:center;font-size:13px;color:#475569;margin:8px}.question{font-size:17px;line-height:1.45}.alt{display:block;width:100%;text-align:left;margin:9px 0;background:#f8fafc;border:2px solid #e2e8f0;padding:12px;border-radius:12px;color:#111827}.alt.sel{border-color:var(--azul2);background:#dbeafe}.alt.correct{border-color:#16a34a;background:#dcfce7}.alt.wrong{border-color:#dc2626;background:#fee2e2}.comment{display:none;background:#f8fafc;border-radius:14px;padding:13px;margin-top:12px;line-height:1.45}.comment.show{display:block}.mini{font-size:12px;color:#64748b}.footer{font-size:11px;color:#64748b;text-align:center;padding:18px}.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}.grid span{background:#e5e7eb;border-radius:10px;padding:8px;text-align:center;font-size:12px}.grid .done{background:#bbf7d0}.grid .err{background:#fecaca}@media(max-width:390px){.hero h2{font-size:25px}.flash{font-size:19px}.menu{grid-template-columns:1fr}header h1{font-size:17px}}
+@media print{body{background:#fff}.app{max-width:none;box-shadow:none}.screen{display:block;page-break-after:always}header,.row,.menu,#login{display:none!important}.card{box-shadow:none;border:1px solid #ccc}.footer{display:block}}
+</style>
+</head>
+<body>
+<div class="app">
+<header><h1>Curso de Contabilidade Professor Moreira</h1><p>Ativo Imobilizado • WhatsApp <span class="whats">(61) 98532-3574</span></p></header>
+
+<section id="login" class="screen active">
+  <div class="hero"><span class="badge">Padrão Professor Moreira Mobile</span><h2>ATIVO IMOBILIZADO</h2><p>Mapa textual matador, flashcards e quiz comentado para revisão FGV/CFC.</p></div>
+  <div class="card"><h3>Identificação do aluno</h3><p>Digite seu nome para iniciar o material.</p><input id="aluno" placeholder="Nome completo do aluno" /><br><br><button class="btn2" onclick="liberar()">Enviar nome no WhatsApp e começar</button><p class="mini">O botão abre o WhatsApp do Professor Moreira com o nome informado.</p></div>
+</section>
+
+<section id="home" class="screen">
+ <div class="card"><h2 id="bemvindo">Bem-vindo!</h2><div class="progress"><div id="prog" class="bar"></div></div><p class="mini" id="status"></p></div>
+ <div class="menu"><button class="btn" onclick="show('mapa')">📘 Mapa Textual</button><button class="btn" onclick="show('onepage')">⚡ One Page</button><button class="btn" onclick="show('flash')">🧠 Flashcards</button><button class="btn" onclick="show('quiz')">✅ Quiz Comentado</button></div>
+ <div class="card"><h3>Como estudar</h3><p>1) Leia o mapa. 2) Revise os flashcards. 3) Faça o quiz. 4) Refaça as questões erradas.</p></div>
+</section>
+
+<section id="mapa" class="screen mapa"><h2>Mapa Textual Matador</h2>
+ <div class="topic"><h3>1. Conceito legal</h3><p>Ativo imobilizado representa direitos sobre <b>bens corpóreos</b> destinados à manutenção das atividades da companhia ou empresa, inclusive bens decorrentes de operações que transfiram benefícios, riscos e controle.</p></div>
+ <div class="topic"><h3>2. Requisitos para ser imobilizado</h3><ul><li>Ser tangível/corpóreo.</li><li>Ser usado na produção, comercialização, locação ou administração.</li><li>Ter expectativa de uso por mais de 12 meses.</li><li>Gerar benefícios econômicos futuros.</li><li>Ter custo mensurável com segurança.</li></ul></div>
+ <div class="ok"><b>Tradução para prova:</b> se o bem é usado na atividade operacional ou administrativa e é corpóreo, a tendência é ser Ativo Imobilizado.</div>
+ <div class="topic"><h3>3. Exemplos clássicos</h3><p><span class="pill">Terrenos</span><span class="pill">Edifícios</span><span class="pill">Máquinas</span><span class="pill">Navios</span><span class="pill">Aviões</span><span class="pill">Veículos</span><span class="pill">Móveis e utensílios</span><span class="pill">Equipamentos de escritório</span></p></div>
+ <div class="topic"><h3>4. Imobilizado em andamento</h3><p>Inclui bens e materiais destinados à aplicação no imobilizado, como materiais para construção de imobilizado, peças para expansão, postes, medidores e itens ainda ligados a projeto em desenvolvimento.</p></div>
+ <div class="topic"><h3>5. Custo inicial do imobilizado</h3><div class="formula">Preço de aquisição<br>+ impostos de importação<br>+ impostos não recuperáveis<br>− descontos comerciais<br>− abatimentos<br>+ custos diretamente atribuíveis<br>+ valor presente da desmontagem, remoção e restauração</div></div>
+ <div class="topic"><h3>6. Custos diretamente atribuíveis</h3><ul><li>Benefícios a empregados ligados diretamente à construção/aquisição.</li><li>Preparação do local.</li><li>Frete e manuseio para recebimento e instalação.</li><li>Instalação e montagem.</li><li>Testes para verificar se o ativo funciona corretamente.</li><li>Honorários profissionais.</li></ul></div>
+ <div class="alerta"><b>Não entram no custo:</b> abertura de nova instalação, propaganda, promoção, treinamento, transferência para novo local ou nova clientela, custos administrativos e custos indiretos.</div>
+ <div class="topic"><h3>7. Segurança e exigência ambiental</h3><p>Ativos adquiridos por segurança ou exigência ambiental podem ser reconhecidos no imobilizado mesmo que não aumentem diretamente os benefícios de um ativo específico, desde que sejam necessários para a entidade obter benefícios de outros ativos.</p></div>
+ <div class="topic"><h3>8. Custos subsequentes</h3><p>Manutenção periódica é despesa no resultado. Já a substituição relevante de parte do ativo pode ser incorporada ao valor contábil se atender aos critérios de reconhecimento. A parte substituída deve ser baixada.</p></div>
+ <div class="dica"><b>Pegadinha FGV:</b> manutenção comum = despesa. Substituição de parte relevante = pode ativar, com baixa da parte antiga.</div>
+ <div class="row"><button class="btn3" onclick="show('home')">Voltar</button><button class="btn" onclick="show('flash')">Ir para Flashcards</button></div>
+</section>
+
+<section id="onepage" class="screen mapa"><h2>One Page de Véspera</h2><div class="card"><h3>Regra de ouro</h3><p><b>Corpóreo + uso na atividade + mais de 12 meses = Imobilizado.</b></p></div><div class="card"><h3>Entra no custo</h3><p>Preço, impostos não recuperáveis, frete, preparação, instalação, montagem, testes, honorários e desmontagem a valor presente.</p></div><div class="card"><h3>Não entra</h3><p>Abertura de nova instalação, propaganda, promoção, treinamento, transferência de atividades e custos administrativos.</p></div><div class="card"><h3>Decore</h3><p><b>Teste entra. Treinamento não entra.</b><br><b>Frete para instalar entra. Propaganda não entra.</b><br><b>Desmontagem entra pelo valor presente.</b></p></div><div class="row"><button class="btn3" onclick="show('home')">Voltar</button><button class="btn" onclick="show('quiz')">Fazer Quiz</button></div></section>
+
+<section id="flash" class="screen"><h2>Flashcards</h2><div class="counter" id="fcCount"></div><div id="fcBox" class="flash" onclick="virarFlash()"></div><br><div class="row"><button class="btn3" onclick="prevFlash()">◀ Voltar</button><button class="btn" onclick="nextFlash()">Avançar ▶</button><button class="btn-red" onclick="resetFlash()">Reiniciar</button></div><br><button class="btn3" onclick="show('home')">Menu</button></section>
+
+<section id="quiz" class="screen"><h2>Quiz Comentado</h2><div class="counter" id="qCount"></div><div class="card"><div class="question" id="qText"></div><div id="alts"></div><div id="comment" class="comment"></div></div><div class="row"><button class="btn3" onclick="prevQ()">◀ Voltar</button><button class="btn" onclick="nextQ()">Próxima ▶</button><button class="btn-red" onclick="resetQuiz()">Reiniciar</button></div><div class="card"><h3>Grade</h3><div id="grade" class="grid"></div></div><button class="btn3" onclick="show('home')">Menu</button></section>
+
+<div class="footer">Curso de Contabilidade Professor Moreira • WhatsApp (61) 98532-3574</div>
+</div>
+<script>
+const whats='5561985323574';let aluno=localStorage.getItem('pm_aluno')||'';let current='login';
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');current=id;salvar();if(id==='home')home();if(id==='flash')renderFlash();if(id==='quiz')renderQ()}
+function liberar(){let n=document.getElementById('aluno').value.trim();if(!n){alert('Digite o nome do aluno.');return}aluno=n;localStorage.setItem('pm_aluno',n);window.open(`https://wa.me/${whats}?text=${encodeURIComponent('Professor Moreira, meu nome é '+n+' e estou iniciando o HTML de Ativo Imobilizado.')}`,'_blank');show('home')}
+function home(){document.getElementById('bemvindo').innerText='Bons estudos, '+(aluno||'aluno')+'!';let done=Object.keys(ans).length;document.getElementById('status').innerText=`Quiz: ${done}/${quiz.length} respondidas`;document.getElementById('prog').style.width=(done/quiz.length*100)+'%'}
+const flashcards=[
+['O que é ativo imobilizado?','São bens corpóreos mantidos para uso na produção, comercialização, locação ou administração, com expectativa de uso superior a 12 meses.'],
+['Qual é a palavra-chave do imobilizado?','Uso. O bem deve ser usado na atividade da entidade, e não mantido para venda imediata.'],
+['Veículo usado para entregas é imobilizado?','Sim. É corpóreo, usado na atividade operacional e gera benefícios econômicos.'],
+['Moto usada por diretor é imobilizado?','Sim. Uso administrativo também caracteriza imobilizado.'],
+['Imóvel para aluguel a terceiros é imobilizado?','Em regra, não. Normalmente é propriedade para investimento, se mantido para renda.'],
+['Bem mantido para venda é imobilizado?','Não. Se está mantido para venda, não atende ao critério de uso na atividade.'],
+['Custo do imobilizado começa com quê?','Preço de aquisição, deduzidos descontos comerciais e abatimentos.'],
+['Imposto de importação entra no custo?','Sim, compõe o custo do item do imobilizado.'],
+['Imposto recuperável entra no custo?','Não. Somente impostos não recuperáveis integram o custo.'],
+['Frete entra no custo?','Sim, quando necessário para colocar o ativo no local e condição de funcionamento.'],
+['Instalação e montagem entram no custo?','Sim. São custos diretamente atribuíveis.'],
+['Testes de funcionamento entram no custo?','Sim, quando servem para verificar se o ativo está funcionando corretamente.'],
+['Treinamento entra no custo?','Não. Custos de treinamento não compõem o custo do imobilizado.'],
+['Propaganda entra no custo?','Não. Propaganda e atividades promocionais não integram o custo do imobilizado.'],
+['Abertura de nova instalação entra no custo?','Não. É exemplo clássico de gasto que não compõe o custo do ativo imobilizado.'],
+['Desmontagem entra no custo?','Sim, pela estimativa inicial, geralmente mensurada a valor presente.'],
+['Manutenção periódica é ativo?','Não. Manutenção periódica é despesa quando incorrida.'],
+['Substituição relevante de peça pode ser ativada?','Sim, se atender aos critérios de reconhecimento; a parte substituída deve ser baixada.'],
+['Ativo por exigência ambiental pode ser imobilizado?','Sim, quando necessário para a entidade obter benefícios econômicos de outros ativos.'],
+['Imobilizado em andamento é o quê?','Bens, obras e materiais destinados à aplicação no imobilizado, ainda não prontos para uso.'],
+['Software indispensável ao funcionamento da máquina fica onde?','Quando a máquina só funciona com o software específico adquirido conjuntamente, o conjunto pode ser reconhecido no imobilizado.'],
+['Corpóreo x incorpóreo','Imobilizado tem objeto corpóreo. Intangível tem objeto incorpóreo.'],
+['Custo administrativo entra no imobilizado?','Não. Custos administrativos e outros indiretos não entram no custo.'],
+['Preparação do local entra?','Sim. É custo diretamente atribuível.'],
+['Honorários profissionais entram?','Sim, quando diretamente atribuíveis à aquisição ou construção do item.'],
+['Receita de evento-teste deve reduzir o ativo?','Não. Pela regra atual, receitas de teste relevantes são contabilizadas como receitas do período.'],
+['Fórmula matadora do custo','Preço + impostos não recuperáveis + custos diretamente atribuíveis + desmontagem a valor presente − descontos e abatimentos.'],
+['Pegadinha: teste x treinamento','Teste entra no custo. Treinamento não entra.'],
+['Pegadinha: segurança','Grades, sistemas e adaptações por segurança podem ser imobilizado se necessários à operação.'],
+['Pegadinha: manutenção','Reparo e manutenção periódica não aumentam o ativo: vão para despesa.']
+];
+let fi=+(localStorage.getItem('pm_fi')||0), fback=false;function renderFlash(){document.getElementById('fcCount').innerText=`Cartão ${fi+1} de ${flashcards.length} • toque no cartão para virar`;let b=document.getElementById('fcBox');b.className='flash'+(fback?' back':'');b.innerHTML=fback?flashcards[fi][1]:flashcards[fi][0];salvar()}function virarFlash(){fback=!fback;renderFlash()}function nextFlash(){fi=(fi+1)%flashcards.length;fback=false;renderFlash()}function prevFlash(){fi=(fi-1+flashcards.length)%flashcards.length;fback=false;renderFlash()}function resetFlash(){fi=0;fback=false;renderFlash()}
+const quiz=[
+{q:'1. Uma empresa de entregas possui cinco motos usadas nas entregas e duas motos usadas pelos diretores. Como devem ser apresentadas?',a:['Investimentos','Ativo Imobilizado','Parte investimentos e parte imobilizado','Despesa operacional'],c:1,com:'Todas são usadas na atividade operacional ou administrativa. Portanto, classificam-se no Ativo Imobilizado.'},
+{q:'2. Qual item NÃO é custo diretamente atribuível ao imobilizado?',a:['Honorários profissionais','Frete e manuseio','Preparação do local','Custos de abertura de nova instalação'],c:3,com:'Abertura de nova instalação não compõe o custo do ativo imobilizado.'},
+{q:'3. Qual custo é diretamente atribuível ao imobilizado?',a:['Propaganda do novo produto','Teste de funcionamento do ativo','Treinamento de equipe','Transferência para novo local'],c:1,com:'Testes para verificar se o ativo funciona corretamente entram no custo.'},
+{q:'4. São classificados como imobilizado em andamento:',a:['Bens incorpóreos','Peças destinadas à substituição em máquinas e equipamentos','Bens usados em transporte','Bens em uso na fase pré-operacional de um projeto'],c:3,com:'Imobilizado em andamento envolve itens ligados a projetos ainda em desenvolvimento, antes do uso definitivo.'},
+{q:'5. Grades instaladas por segurança em restaurante, necessárias para manter o fluxo de atendimento, são:',a:['Ativo Imobilizado','Investimentos','Realizável a longo prazo','Despesa operacional'],c:0,com:'Ativos por segurança podem ser reconhecidos como imobilizado quando necessários para obter benefícios de outros ativos.'},
+{q:'6. Máquina de R$50.000, software indispensável de R$20.000 e frete de R$2.000. Reconhecimento:',a:['Intangível R$70.000','Imobilizado R$72.000','Imobilizado R$50.000 e intangível R$20.000','Imobilizado R$52.000 e intangível R$20.000'],c:1,com:'Como a máquina só funciona com o software específico, o conjunto mais o frete integra o imobilizado: R$72.000.'},
+{q:'7. Diferença brasileira/internacional: DVA obrigatória para companhias abertas e reavaliação proibida no Brasil. Correto?',a:['I apenas','II apenas','I e II apenas','II e III apenas'],c:2,com:'DVA obrigatória no Brasil e proibição da reavaliação são diferenças relevantes. Depreciação por taxa fiscal não é encorajada.'},
+{q:'8. Plataforma: preparação 10, frete 3, instalação 40, transferência/treinamento 2, testes 1, desmontagem VP 4. Custo?',a:['55 milhões','58 milhões','64 milhões','66 milhões'],c:1,com:'Entra: 10 + 3 + 40 + 1 + 4 = 58. Treinamento/transferência não entra. Usa-se o valor presente da desmontagem.'},
+{q:'9. Receitas eventuais de evento-teste, se relevantes, devem ser:',a:['Deduzidas do PL','Receitas diferidas','Receitas do período','Deduzidas da construção'],c:2,com:'Receitas obtidas antes do uso pretendido, como evento-teste, são reconhecidas como receitas do período, se relevantes.'},
+{q:'10. Diferença específica entre imobilizado e intangível:',a:['Imobilizado corpóreo e intangível incorpóreo','Imobilizado sempre vida definida e intangível sempre indefinida','Imobilizado sofre exaustão','Intangível não sofre impairment'],c:0,com:'A diferença central é a natureza: imobilizado é corpóreo; intangível é incorpóreo.'},
+{q:'11. Consultoria: computadores usados na atividade fim R$35.000; aluguel antecipado R$48.000; veículo mantido para venda R$70.000; imóvel para aluguel R$85.000. Imobilizado?',a:['R$35.000','R$83.000','R$105.000','R$190.000'],c:0,com:'Somente os computadores usados na atividade fim são imobilizado. Aluguel antecipado é ativo circulante/realizável; veículo para venda não é uso; imóvel para aluguel é investimento.'},
+{q:'12. Manutenção periódica de máquina deve ser:',a:['Ativada sempre','Despesa quando incorrida','Reconhecida em investimentos','Registrada no patrimônio líquido'],c:1,com:'Manutenção periódica é reparo e manutenção: vai ao resultado.'},
+{q:'13. Substituição de revestimento relevante de forno, atendidos os critérios, deve ser:',a:['Despesa obrigatória','Ativada e baixada a parte substituída','Receita diferida','Reserva de capital'],c:1,com:'A peça nova pode ser reconhecida no ativo, e o valor contábil da parte substituída deve ser baixado.'},
+{q:'14. Descontos comerciais na compra do imobilizado:',a:['Aumentam o custo','São deduzidos do custo','São receita financeira','São despesa'],c:1,com:'O custo considera o preço de aquisição deduzido de descontos comerciais e abatimentos.'},
+{q:'15. Impostos não recuperáveis sobre a compra:',a:['Entram no custo','Nunca entram','Vão para despesa financeira','São intangível'],c:0,com:'Impostos não recuperáveis compõem o custo do imobilizado.'}
+];
+let qi=+(localStorage.getItem('pm_qi')||0);let ans=JSON.parse(localStorage.getItem('pm_ans')||'{}');function renderQ(){let q=quiz[qi];document.getElementById('qCount').innerText=`Questão ${qi+1} de ${quiz.length}`;document.getElementById('qText').innerText=q.q;let al=document.getElementById('alts');al.innerHTML='';q.a.forEach((t,i)=>{let b=document.createElement('button');b.className='alt';b.innerText=String.fromCharCode(65+i)+') '+t;b.onclick=()=>responder(i);if(ans[qi]!==undefined){if(i===q.c)b.classList.add('correct'); if(i===ans[qi]&&i!==q.c)b.classList.add('wrong')}al.appendChild(b)});let c=document.getElementById('comment');if(ans[qi]!==undefined){c.classList.add('show');c.innerHTML='<b>Comentário:</b> '+q.com}else{c.classList.remove('show');c.innerHTML=''}grade();salvar()}
+function responder(i){ans[qi]=i;localStorage.setItem('pm_ans',JSON.stringify(ans));renderQ()}function nextQ(){qi=(qi+1)%quiz.length;renderQ()}function prevQ(){qi=(qi-1+quiz.length)%quiz.length;renderQ()}function resetQuiz(){if(confirm('Reiniciar o quiz?')){ans={};qi=0;localStorage.removeItem('pm_ans');renderQ()}}function grade(){let g=document.getElementById('grade');g.innerHTML='';quiz.forEach((q,i)=>{let s=document.createElement('span');s.innerText=i+1;if(ans[i]!==undefined)s.className=ans[i]===q.c?'done':'err';s.onclick=()=>{qi=i;renderQ()};g.appendChild(s)})}
+function salvar(){localStorage.setItem('pm_fi',fi);localStorage.setItem('pm_qi',qi)}
+if(aluno){show('home')}
+</script>
+</body>
+</html>
